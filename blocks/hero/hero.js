@@ -32,6 +32,7 @@ export default async function decorate(block) {
       const img = picture.querySelector('img');
       if (img) {
         img.setAttribute('loading', 'eager');
+        img.setAttribute('fetchpriority', 'high');
       }
       backgroundImage = picture.outerHTML;
       return;
