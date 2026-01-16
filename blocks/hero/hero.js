@@ -3,6 +3,7 @@
  * Hero Block
  *
  * Full-width hero section with background image, headline, description, and CTAs.
+ * Preserves original picture element for LCP optimization.
  */
 
 import { decorateIcons } from '../../scripts/aem.js';
@@ -20,13 +21,13 @@ export default async function decorate(block) {
   let description = '';
   let primaryCTA = null;
   let secondaryCTA = null;
-  let backgroundImage = '';
+  let pictureElement = null;
 
   rows.forEach((row) => {
     // Get all cells in this row
     const cells = [...row.querySelectorAll(':scope > div')];
 
-    // Check for picture first (background image)
+    // Check for picture first (background image) - preserve the actual DOM element
     const picture = row.querySelector('picture');
     if (picture) {
       const img = picture.querySelector('img');
@@ -34,7 +35,8 @@ export default async function decorate(block) {
         img.setAttribute('loading', 'eager');
         img.setAttribute('fetchpriority', 'high');
       }
-      backgroundImage = picture.outerHTML;
+      // Store the actual DOM element, not outerHTML
+      pictureElement = picture;
       return;
     }
 
@@ -79,9 +81,32 @@ export default async function decorate(block) {
     }
   });
 
-  // Build the hero HTML
-  const badgeHTML = badgeText ? `
-    <div class="hero-badge-group">
+  // Build the hero structure using DOM manipulation to preserve original picture
+  const heroBackground = document.createElement('div');
+  heroBackground.className = 'hero-background';
+
+  // Append the original picture element (preserves LCP discoverability)
+  if (pictureElement) {
+    heroBackground.appendChild(pictureElement);
+  }
+
+  // Add overlay
+  const overlay = document.createElement('div');
+  overlay.className = 'hero-overlay';
+  heroBackground.appendChild(overlay);
+
+  // Build inner content
+  const heroInner = document.createElement('div');
+  heroInner.className = 'hero-inner';
+
+  const heroContent = document.createElement('div');
+  heroContent.className = 'hero-content';
+
+  // Badge
+  if (badgeText) {
+    const badgeGroup = document.createElement('div');
+    badgeGroup.className = 'hero-badge-group';
+    badgeGroup.innerHTML = `
       <span class="hero-badge">
         <span class="hero-badge-dot"></span>
         <span class="hero-badge-text">${badgeText}</span>
@@ -92,50 +117,63 @@ export default async function decorate(block) {
           <span class="icon icon-arrow-right"></span>
         </span>
       ` : ''}
-    </div>
-  ` : '';
-
-  const headlineHTML = headline ? `<h1 class="hero-headline">${headline}</h1>` : '';
-
-  const descriptionHTML = description ? `<p class="hero-description">${description}</p>` : '';
-
-  let actionsHTML = '';
-  if (primaryCTA || secondaryCTA) {
-    actionsHTML = '<div class="hero-actions">';
-    if (secondaryCTA) {
-      actionsHTML += `
-        <a href="${secondaryCTA.href}" class="button secondary button-xl">
-          <span class="icon icon-play-circle"></span>
-          <span>${secondaryCTA.text}</span>
-        </a>
-      `;
-    }
-    if (primaryCTA) {
-      actionsHTML += `
-        <a href="${primaryCTA.href}" class="button primary button-xl">
-          <span>${primaryCTA.text}</span>
-        </a>
-      `;
-    }
-    actionsHTML += '</div>';
+    `;
+    heroContent.appendChild(badgeGroup);
   }
 
-  block.innerHTML = `
-    <div class="hero-background">
-      ${backgroundImage}
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="hero-inner">
-      <div class="hero-content">
-        ${badgeHTML}
-        <div class="hero-heading-section">
-          ${headlineHTML}
-          ${descriptionHTML}
-        </div>
-        ${actionsHTML}
-      </div>
-    </div>
-  `;
+  // Heading section
+  const headingSection = document.createElement('div');
+  headingSection.className = 'hero-heading-section';
+
+  if (headline) {
+    const h1 = document.createElement('h1');
+    h1.className = 'hero-headline';
+    h1.textContent = headline;
+    headingSection.appendChild(h1);
+  }
+
+  if (description) {
+    const p = document.createElement('p');
+    p.className = 'hero-description';
+    p.textContent = description;
+    headingSection.appendChild(p);
+  }
+
+  heroContent.appendChild(headingSection);
+
+  // Actions
+  if (primaryCTA || secondaryCTA) {
+    const actions = document.createElement('div');
+    actions.className = 'hero-actions';
+
+    if (secondaryCTA) {
+      const secondaryBtn = document.createElement('a');
+      secondaryBtn.href = secondaryCTA.href;
+      secondaryBtn.className = 'button secondary button-xl';
+      secondaryBtn.innerHTML = `
+        <span class="icon icon-play-circle"></span>
+        <span>${secondaryCTA.text}</span>
+      `;
+      actions.appendChild(secondaryBtn);
+    }
+
+    if (primaryCTA) {
+      const primaryBtn = document.createElement('a');
+      primaryBtn.href = primaryCTA.href;
+      primaryBtn.className = 'button primary button-xl';
+      primaryBtn.innerHTML = `<span>${primaryCTA.text}</span>`;
+      actions.appendChild(primaryBtn);
+    }
+
+    heroContent.appendChild(actions);
+  }
+
+  heroInner.appendChild(heroContent);
+
+  // Clear block and append new structure
+  block.textContent = '';
+  block.appendChild(heroBackground);
+  block.appendChild(heroInner);
 
   // Decorate icons
   await decorateIcons(block);
