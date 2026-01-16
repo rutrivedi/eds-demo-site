@@ -1,5 +1,10 @@
+// AI Generated Code by Deloitte + Cursor (BEGIN)
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
+/**
+ * loads and decorates the cards block
+ * @param {Element} block The cards block element
+ */
 export default function decorate(block) {
   /* change to ul, li */
   const ul = document.createElement('ul');
@@ -12,6 +17,10 @@ export default function decorate(block) {
     });
     ul.append(li);
   });
-  ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
-  block.replaceChildren(ul);
+  ul.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
+  block.textContent = '';
+  block.append(ul);
 }
+// AI Generated Code by Deloitte + Cursor (END)
+
+
