@@ -1,4 +1,5 @@
 /* AI Generated Code by Deloitte + Cursor (BEGIN) */
+
 /*
  * Inter Font Family
  * Using Google Fonts for reliable delivery
@@ -9,9 +10,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 /* Fallback font-face definitions for self-hosting (optional) */
+
 /*
 @font-face {
-  font-family: 'Inter';
+  font-family: Inter;
   src: url('/fonts/Inter-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
@@ -19,7 +21,7 @@
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: Inter;
   src: url('/fonts/Inter-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
@@ -27,7 +29,7 @@
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: Inter;
   src: url('/fonts/Inter-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
@@ -37,6 +39,7 @@
 
 /* Font loaded indicator */
 .fonts-loaded body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: Inter, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, helvetica, arial, sans-serif;
 }
+
 /* AI Generated Code by Deloitte + Cursor (END) */
