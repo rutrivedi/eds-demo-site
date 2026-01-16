@@ -1,0 +1,176 @@
+/**
+ * Solution Content Block Styles
+ * Rich text article content with various content types
+ */
+
+.solution-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: var(--paragraph-max-width, 720px);
+  gap: 0;
+}
+
+.solution-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Intro paragraph (larger text) */
+.solution-content-wrapper > div:first-child p,
+.solution-content-paragraph-xl {
+  color: var(--color-text-tertiary);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-text-xl);
+  line-height: var(--line-height-text-xl);
+  font-weight: 400;
+  margin: 0 0 var(--spacing-4xl) 0;
+}
+
+/* Dividers */
+.solution-content hr,
+.solution-content-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border-secondary, #E9EAEB);
+  border: none;
+  margin: var(--spacing-4xl) 0;
+}
+
+/* Headings */
+.solution-content h2,
+.solution-content-heading-lg {
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: var(--spacing-2xl);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-display-sm);
+  line-height: var(--line-height-display-sm);
+  font-weight: 600;
+}
+
+.solution-content h3,
+.solution-content-heading-md {
+  margin: 0;
+  padding-top: var(--spacing-4xl);
+  padding-bottom: var(--spacing-xl);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-display-xs);
+  line-height: var(--line-height-display-xs);
+  font-weight: 600;
+}
+
+/* Paragraphs */
+.solution-content p,
+.solution-content-paragraph {
+  margin: 0 0 var(--spacing-3xl) 0;
+  color: var(--color-text-tertiary);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-text-lg);
+  line-height: var(--line-height-text-lg);
+  font-weight: 400;
+  white-space: pre-line;
+}
+
+.solution-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Lists */
+.solution-content ul,
+.solution-content ol {
+  margin: 0 0 var(--spacing-3xl) 0;
+  padding-left: var(--spacing-3xl);
+  color: var(--color-text-tertiary);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-text-lg);
+  line-height: var(--line-height-text-lg);
+}
+
+.solution-content li {
+  margin-bottom: var(--spacing-md);
+}
+
+/* Images */
+.solution-content picture,
+.solution-content-image {
+  display: block;
+  margin: var(--spacing-6xl) 0;
+  width: 100%;
+}
+
+.solution-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+}
+
+/* Quotes */
+.solution-content blockquote,
+.solution-content-quote {
+  margin: var(--spacing-6xl) 0;
+  padding: var(--spacing-md) 0;
+  padding-left: var(--spacing-2xl);
+  border-left: 2px solid var(--color-brand-primary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4xl);
+}
+
+.solution-content-quote-text {
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-display-xs);
+  line-height: var(--line-height-display-xs);
+  font-style: italic;
+  font-weight: 500;
+  margin: 0;
+}
+
+.solution-content-quote-author {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.solution-content-quote-name {
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-text-md);
+  line-height: var(--line-height-text-md);
+  font-weight: 600;
+  margin: 0;
+}
+
+.solution-content-quote-title {
+  color: var(--color-text-tertiary);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-text-md);
+  line-height: var(--line-height-text-md);
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Feature callout box */
+.solution-content-feature {
+  margin: var(--spacing-6xl) 0;
+  padding: var(--spacing-4xl);
+  background: var(--color-bg-secondary, #FAFAFA);
+  border-radius: var(--radius-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.solution-content-feature h3 {
+  padding-top: 0;
+  margin-bottom: 0;
+}
+
+.solution-content-feature p {
+  margin-bottom: 0;
+}

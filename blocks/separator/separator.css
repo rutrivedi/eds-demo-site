@@ -1,0 +1,31 @@
+/**
+ * Separator Block Styles
+ */
+
+/* Remove section padding from separator container */
+main .section.separator-container {
+  padding: 0 !important;
+}
+
+/* Separator block */
+.separator {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Separator line */
+.separator-line {
+  width: 100%;
+  max-width: 1280px;
+  height: 1px;
+  background-color: #E9EAEB;
+  margin: 0 var(--spacing-xl);
+}
+
+@media (min-width: 900px) {
+  .separator-line {
+    margin: 0 var(--spacing-4xl);
+  }
+}

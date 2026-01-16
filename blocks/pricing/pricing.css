@@ -1,0 +1,263 @@
+/* AI Generated Code by Deloitte + Cursor (BEGIN) */
+/**
+ * Pricing Block Styles
+ * Mobile-first responsive design
+ */
+
+/* Pricing block */
+.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-7xl);
+}
+
+/* Pricing header */
+.pricing-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-2xl);
+  max-width: 768px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Heading and subheading wrapper */
+.pricing-heading-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+  align-self: stretch;
+}
+
+/* Pricing subheading */
+.pricing-subheading {
+  margin: 0;
+  font-size: var(--font-size-text-sm);
+  line-height: var(--line-height-text-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-brand-primary);
+  text-align: center;
+  align-self: stretch;
+}
+
+@media (min-width: 900px) {
+  .pricing-subheading {
+    font-size: var(--font-size-text-md);
+    line-height: var(--line-height-text-md);
+  }
+}
+
+/* Pricing heading */
+.pricing-heading {
+  margin: 0;
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  letter-spacing: 0;
+  text-align: center;
+  align-self: stretch;
+}
+
+@media (min-width: 900px) {
+  .pricing-heading {
+    font-size: var(--font-size-display-md);
+    line-height: var(--line-height-display-md);
+    letter-spacing: -0.72px;
+  }
+}
+
+/* Pricing description */
+.pricing-description {
+  margin: 0;
+  font-size: var(--font-size-text-lg);
+  line-height: var(--line-height-text-lg);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-tertiary);
+  text-align: center;
+  align-self: stretch;
+}
+
+@media (min-width: 900px) {
+  .pricing-description {
+    font-size: var(--font-size-text-xl);
+    line-height: var(--line-height-text-xl);
+  }
+}
+
+/* Pricing content */
+.pricing-content {
+  width: 100%;
+  max-width: 1280px;
+}
+
+/* Pricing cards container */
+.pricing-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-4xl);
+}
+
+@media (min-width: 600px) {
+  .pricing-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .pricing-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Pricing card */
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--color-border-secondary-alt);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+/* Popular card highlight */
+.pricing-card-popular {
+  border-color: var(--color-brand-primary);
+  border-width: 2px;
+}
+
+/* Card header */
+.pricing-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4xl);
+  padding: var(--spacing-3xl);
+  border-bottom: 1px solid var(--color-border-secondary);
+}
+
+.pricing-card-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-xl);
+}
+
+/* Package label */
+.pricing-card-label {
+  font-size: var(--font-size-text-lg);
+  line-height: var(--line-height-text-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-tertiary);
+}
+
+/* Popular badge */
+.pricing-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-xxs) var(--spacing-lg);
+  font-size: var(--font-size-text-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-brand-primary);
+  border: 1px solid var(--color-brand-primary);
+  border-radius: var(--radius-full);
+}
+
+/* Package name */
+.pricing-card-name {
+  margin: 0;
+  font-size: var(--font-size-display-xl);
+  line-height: var(--line-height-display-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+/* Package description */
+.pricing-card-description {
+  margin: 0;
+  font-size: var(--font-size-text-md);
+  line-height: var(--line-height-text-md);
+  color: var(--color-text-tertiary);
+}
+
+/* Card actions */
+.pricing-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Card content */
+.pricing-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3xl);
+  padding: var(--spacing-3xl);
+}
+
+/* Features header */
+.pricing-features-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.pricing-features-label {
+  font-size: var(--font-size-text-md);
+  line-height: var(--line-height-text-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.pricing-inherits {
+  margin: 0;
+  font-size: var(--font-size-text-md);
+  line-height: var(--line-height-text-md);
+  color: var(--color-text-tertiary);
+}
+
+.pricing-inherits strong {
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Features list */
+.pricing-features-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+/* Feature item */
+.pricing-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+}
+
+.pricing-feature-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--color-brand-primary);
+}
+
+.pricing-feature-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.pricing-feature-text {
+  flex: 1;
+  font-size: var(--font-size-text-md);
+  line-height: var(--line-height-text-md);
+  color: var(--color-text-tertiary);
+}
+/* AI Generated Code by Deloitte + Cursor (END) */
+

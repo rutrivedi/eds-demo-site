@@ -1,0 +1,200 @@
+/* AI Generated Code by Deloitte + Cursor (BEGIN) */
+/**
+ * Banner Block Styles
+ * Mobile-first responsive design
+ */
+
+/* Banner wrapper */
+.banner-wrapper {
+  background-color: transparent;
+}
+
+/* Banner block */
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .banner {
+    min-height: 488px;
+  }
+}
+
+/* Banner background */
+.banner-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Banner container */
+.banner-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  padding: var(--spacing-6xl) 0;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 900px) {
+  .banner-container {
+    padding: var(--spacing-9xl) 0;
+  }
+}
+
+/* Banner content wrapper - two column layout */
+.banner-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6xl);
+  align-items: flex-start;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: var(--spacing-6xl) var(--spacing-xl);
+}
+
+@media (min-width: 900px) {
+  .banner-content-wrapper {
+    flex-direction: row;
+    gap: var(--spacing-9xl);
+    padding: var(--spacing-7xl) var(--spacing-4xl);
+  }
+}
+
+/* Banner header */
+.banner-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+  flex: 1 0 0;
+}
+
+/* Banner subheading */
+.banner-subheading {
+  margin: 0;
+  font-size: var(--font-size-text-md);
+  line-height: var(--line-height-text-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-brand-primary);
+}
+
+/* Banner heading */
+.banner-heading {
+  margin: 0;
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  letter-spacing: 0;
+}
+
+@media (min-width: 900px) {
+  .banner-heading {
+    font-size: var(--font-size-display-md);
+    line-height: var(--line-height-display-md);
+    letter-spacing: -0.72px;
+  }
+}
+
+/* Banner description */
+.banner-description {
+  margin: 0;
+  font-size: var(--font-size-text-lg);
+  line-height: var(--line-height-text-lg);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-tertiary);
+}
+
+@media (min-width: 900px) {
+  .banner-description {
+    font-size: var(--font-size-text-xl);
+    line-height: var(--line-height-text-xl);
+  }
+}
+
+/* Banner features */
+.banner-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6xl);
+  flex: 1 0 0;
+}
+
+/* Banner feature item */
+.banner-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-xl);
+}
+
+/* Banner featured icon */
+.banner-featured-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-primary);
+  background: var(--color-bg-primary);
+  box-shadow: var(--shadow-button);
+  flex-shrink: 0;
+}
+
+.banner-featured-icon svg,
+.banner-featured-icon img {
+  width: 24px;
+  height: 24px;
+  color: var(--color-text-secondary);
+}
+
+.banner-featured-icon svg path {
+  stroke: #414651;
+}
+
+.banner-featured-icon .icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Banner feature content */
+.banner-feature-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  flex: 1;
+}
+
+/* Banner feature title */
+.banner-feature-title {
+  margin: 0;
+  font-size: var(--font-size-text-lg);
+  line-height: var(--line-height-text-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+/* Banner feature description */
+.banner-feature-description {
+  margin: 0;
+  font-size: var(--font-size-text-md);
+  line-height: var(--line-height-text-md);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-tertiary);
+}
+
+/* AI Generated Code by Deloitte + Cursor (END) */

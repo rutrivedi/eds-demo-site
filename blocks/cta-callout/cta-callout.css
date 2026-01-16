@@ -1,0 +1,110 @@
+/* AI Generated Code by Deloitte + Cursor (BEGIN) */
+/**
+ * CTA Callout Block Styles
+ * Mobile-first responsive design
+ */
+
+/* CTA callout wrapper */
+.cta-callout-wrapper {
+  background-color: var(--color-bg-primary);
+  padding-bottom: var(--spacing-9xl);
+}
+
+/* CTA callout block */
+.cta-callout {
+  display: flex;
+  max-width: 1280px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-4xl);
+}
+
+/* CTA content */
+.cta-content {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: var(--spacing-4xl);
+  flex-wrap: wrap;
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-6xl) var(--spacing-xl);
+  background: #000;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .cta-content {
+    padding: var(--spacing-7xl) var(--spacing-6xl);
+  }
+}
+
+/* CTA text */
+.cta-text {
+  display: flex;
+  min-width: 320px;
+  max-width: 768px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-2xl);
+  flex: 1 0 0;
+}
+
+@media (max-width: 599px) {
+  .cta-text {
+    min-width: 100%;
+  }
+}
+
+/* CTA heading */
+.cta-heading {
+  margin: 0;
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: var(--font-weight-semibold);
+  color: #FFF;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .cta-heading {
+    font-size: var(--font-size-display-md);
+    line-height: var(--line-height-display-md);
+    letter-spacing: -0.72px;
+  }
+}
+
+/* CTA description */
+.cta-description {
+  margin: 0;
+  font-size: var(--font-size-text-lg);
+  line-height: var(--line-height-text-lg);
+  font-weight: var(--font-weight-regular);
+  color: #E9D7FE;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .cta-description {
+    font-size: var(--font-size-text-xl);
+    line-height: var(--line-height-text-xl);
+  }
+}
+
+/* CTA actions */
+.cta-actions {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+/* CTA button */
+.cta-button {
+  display: flex;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+/* AI Generated Code by Deloitte + Cursor (END) */

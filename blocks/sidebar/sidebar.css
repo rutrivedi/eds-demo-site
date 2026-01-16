@@ -1,0 +1,128 @@
+/**
+ * Sidebar Block Styles
+ * Mobile-first responsive sticky sidebar
+ */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4xl);
+  padding: var(--spacing-3xl) 0;
+}
+
+@media (min-width: 900px) {
+  .sidebar {
+    min-width: 240px;
+    position: sticky;
+    top: calc(var(--nav-height, 80px) + var(--spacing-3xl));
+    align-self: flex-start;
+  }
+}
+
+/* Container */
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4xl);
+}
+
+/* Dividers */
+.sidebar-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border-secondary, #E9EAEB);
+}
+
+/* Content */
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.sidebar-heading {
+  color: var(--color-brand-primary);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-text-md);
+  line-height: var(--line-height-text-md);
+  font-weight: 800;
+}
+
+/* Table of Contents */
+.sidebar-toc {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.sidebar-toc-item {
+  display: flex;
+}
+
+.sidebar-toc-link {
+  color: var(--color-text-tertiary);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-text-md);
+  line-height: var(--line-height-text-md);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.sidebar-toc-link:hover {
+  color: var(--color-brand-primary);
+}
+
+.sidebar-toc-link:focus {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Social Links */
+.sidebar-social {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+}
+
+.sidebar-social-btn {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-primary, #D5D7DA);
+  background: var(--color-bg-primary);
+  box-shadow: 
+    0 0 0 1px rgba(10, 13, 18, 0.18) inset,
+    0 -2px 0 0 rgba(10, 13, 18, 0.05) inset,
+    0 1px 2px 0 rgba(10, 13, 18, 0.05);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.sidebar-social-btn:hover {
+  background: #F9FAFB;
+  border-color: #A4A7AE;
+}
+
+.sidebar-social-btn:focus {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: 2px;
+}
+
+.sidebar-social-btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}

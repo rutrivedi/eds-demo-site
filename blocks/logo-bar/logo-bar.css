@@ -1,0 +1,150 @@
+/* AI Generated Code by Deloitte + Cursor (BEGIN) */
+/**
+ * Logo Bar Block Styles
+ * Based on Figma: Social proof section
+ * Mobile-first responsive design
+ */
+
+/* Block container */
+.logo-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-4xl);
+  padding: var(--spacing-6xl) 0;
+  background-color: var(--color-bg-primary);
+}
+
+@media (min-width: 900px) {
+  .logo-bar {
+    padding: var(--spacing-9xl) 0;
+    gap: var(--spacing-4xl);
+  }
+}
+
+/* Heading */
+.logo-bar-heading {
+  margin: 0;
+  font-size: var(--font-size-text-md);
+  line-height: var(--line-height-text-md);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-tertiary);
+  text-align: center;
+}
+
+/* Logos container */
+.logo-bar-logos {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Gradient masks */
+.logo-bar-logos::before,
+.logo-bar-logos::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.logo-bar-logos::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-bg-primary), transparent);
+}
+
+.logo-bar-logos::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-bg-primary), transparent);
+}
+
+@media (min-width: 900px) {
+  .logo-bar-logos::before,
+  .logo-bar-logos::after {
+    width: 200px;
+  }
+}
+
+/* Logo track - scrollable on mobile, flex on desktop */
+.logo-bar-track {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--spacing-3xl);
+  padding: 0 100px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.logo-bar-track::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .logo-bar-track {
+    justify-content: center;
+    gap: var(--spacing-3xl);
+    padding: 0 220px;
+    overflow-x: visible;
+    flex-wrap: nowrap;
+  }
+}
+
+/* Individual logo item - contains both mark and text */
+.logo-bar-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  height: 48px;
+}
+
+/* Logo mark (icon) */
+.logo-bar-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+}
+
+.logo-bar-mark img,
+.logo-bar-mark svg,
+.logo-bar-mark picture {
+  height: 48px;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+}
+
+.logo-bar-mark picture img {
+  height: 48px;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+}
+
+/* Logo text (company name) */
+.logo-bar-text {
+  font-family: var(--font-family-body);
+  font-size: 20px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* Logo bar wrapper */
+.logo-bar-wrapper {
+  padding: 0;
+}
+
+/* Section styles */
+main .section.logo-bar-container {
+  padding: 0;
+}
+/* AI Generated Code by Deloitte + Cursor (END) */
