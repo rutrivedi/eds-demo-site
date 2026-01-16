@@ -169,7 +169,7 @@ function parsePricingCards(rows) {
       if (rowText.toLowerCase().includes('everything in')) {
         const match = rowText.match(/everything in\s+(\w+)/i);
         if (match) {
-          currentCard.inheritsFrom = match[1];
+          [, currentCard.inheritsFrom] = match;
         }
         return;
       }

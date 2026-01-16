@@ -3,7 +3,7 @@
  * Banner Block
  *
  * Displays a banner with configurable background image and content overlay.
- * 
+ *
  * Content Structure (from document):
  * | banner |
  * | Background Image |
@@ -72,7 +72,7 @@ export default async function decorate(block) {
   const firstRow = rows[0];
   const firstCell = firstRow.querySelector(':scope > div');
   const img = firstCell?.querySelector('img');
-  
+
   if (img) {
     backgroundImage = img.src;
   }
@@ -98,10 +98,10 @@ export default async function decorate(block) {
 
     const icon = extractIcon(cells[0]);
     const contentCell = cells[1];
-    
+
     const titleEl = contentCell.querySelector('strong');
     const title = titleEl ? titleEl.textContent.trim() : '';
-    
+
     const clone = contentCell.cloneNode(true);
     const titleInClone = clone.querySelector('strong');
     if (titleInClone) titleInClone.remove();

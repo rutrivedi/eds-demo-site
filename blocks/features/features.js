@@ -3,7 +3,7 @@
  * Features Block
  *
  * Displays feature items with optional header (subheading, heading, description).
- * 
+ *
  * Content Structure (from document):
  * | features |
  * | Subheading |
@@ -142,7 +142,7 @@ export default async function decorate(block) {
   if (rows.length >= 3) {
     const firstCell = rows[0].querySelector(':scope > div');
     const hasIcon = firstCell && extractIcon(firstCell);
-    
+
     if (!hasIcon) {
       // First 3 rows are header content
       subheading = getTextContent(rows[0].querySelector(':scope > div'));

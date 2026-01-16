@@ -3,7 +3,7 @@
  * FAQ Block
  *
  * Displays frequently asked questions with icons.
- * 
+ *
  * Content Structure (from document):
  * | faq |
  * | Heading |
@@ -59,7 +59,7 @@ export default async function decorate(block) {
   // Extract CTA section (last 3 rows)
   const ctaHeading = getTextContent(rows[rows.length - 3].querySelector(':scope > div'));
   const ctaDescription = getTextContent(rows[rows.length - 2].querySelector(':scope > div'));
-  
+
   const buttonRow = rows[rows.length - 1];
   const buttonCells = [...buttonRow.querySelectorAll(':scope > div')];
   const buttonText = getTextContent(buttonCells[0]);
@@ -70,7 +70,7 @@ export default async function decorate(block) {
 
   const faqItemsHTML = faqRows.map((row) => {
     const cells = [...row.querySelectorAll(':scope > div')];
-    
+
     if (cells.length < 3) return '';
 
     const icon = extractIcon(cells[0]);

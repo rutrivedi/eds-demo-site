@@ -218,4 +218,3 @@ export default function decorate(block) {
   // Initialize carousel functionality
   initCarousel(block);
 }
-

@@ -17,7 +17,7 @@ export default async function decorate(block) {
 
   rows.forEach((row) => {
     const cells = [...row.querySelectorAll(':scope > div')];
-    
+
     // First row with single cell is the active section heading
     if (cells.length === 1 && !activeSection) {
       activeSection = cells[0].textContent.trim();
@@ -29,10 +29,11 @@ export default async function decorate(block) {
     if (link) {
       const href = link.getAttribute('href');
       const text = link.textContent.trim();
-      
+
       // Social links have icon indicators or specific domains
-      if (href && (href.includes('twitter.com') || href.includes('linkedin.com') || 
-          href.includes('facebook.com') || href.startsWith('#share'))) {
+      if (href
+          && (href.includes('twitter.com') || href.includes('linkedin.com')
+          || href.includes('facebook.com') || href.startsWith('#share'))) {
         socialLinks.push({ href, text });
       } else {
         // Regular TOC links
@@ -48,7 +49,7 @@ export default async function decorate(block) {
   });
 
   // Build sidebar HTML
-  const tocHTML = tocItems.map(item => `
+  const tocHTML = tocItems.map((item) => `
     <li class="sidebar-toc-item">
       <a href="${item.href}" class="sidebar-toc-link">${item.text}</a>
     </li>

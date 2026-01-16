@@ -22,5 +22,3 @@ export default function decorate(block) {
   });
 }
 // AI Generated Code by Deloitte + Cursor (END)
-
-

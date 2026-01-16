@@ -3,7 +3,7 @@
  * CTA Callout Block
  *
  * Displays a call-to-action section with heading, description, and action buttons.
- * 
+ *
  * Content Structure (from document):
  * | cta-callout |
  * | Heading |
@@ -39,12 +39,12 @@ export default function decorate(block) {
   const buttonRows = rows.slice(2);
   const buttonsHTML = buttonRows.map((row, index) => {
     const cells = [...row.querySelectorAll(':scope > div')];
-    
+
     if (cells.length < 2) return '';
 
     const buttonText = getTextContent(cells[0]);
     const buttonLink = getTextContent(cells[1]);
-    
+
     // First button is secondary, second is primary
     const buttonClass = index === 0 ? 'secondary' : 'primary';
 
